@@ -20,14 +20,22 @@ This project demonstrates a complete step-by-step procedure to install Windows 1
 
 ## ⬇️ Downloading Windows 11 ISO
 
-1. Visit the official Microsoft Windows 11 download page  
-2. Navigate to **Download Windows 11 Disk Image (ISO)**  
-3. Select **Windows 11 (multi-edition ISO)**  
-4. Choose your preferred language  
-5. Click **64-bit Download**  
-6. Verify the ISO file in your system  
+### Step 1: Visit official Microsoft download page
+Open a browser and navigate to the official Microsoft Windows 11 ISO download page.
 
-> ⚠️ Always download from official Microsoft sources to ensure security and authenticity.
+![Windows 11 Download Page](screenshots/windows11-download.webp)
+
+### Step 2: Navigate to ISO section
+Scroll down to **Download Windows 11 Disk Image (ISO)**.
+
+### Step 3: Select Windows 11 ISO
+Choose **Windows 11 (multi-edition ISO)**.
+
+### Step 4: Choose language and download
+Select language and click **64-bit Download**.
+
+### Step 5: Verify download
+Ensure ISO file is properly downloaded in your system.
 
 ---
 
@@ -38,7 +46,7 @@ This project demonstrates a complete step-by-step procedure to install Windows 1
 - Minimum system requirements:
   - 8 GB RAM (recommended)
   - 2 CPU cores
-  - 60 GB disk space
+  - 60 GB disk space  
 
 ---
 
@@ -52,7 +60,7 @@ This project demonstrates a complete step-by-step procedure to install Windows 1
 
 ## 💿 Step 2: Mount ISO File
 - Select **Installer disc image file (ISO)**  
-- Browse and select the Windows 11 ISO  
+- Browse and select Windows 11 ISO  
 - Click **Next**
 
 ---
@@ -83,15 +91,25 @@ This project demonstrates a complete step-by-step procedure to install Windows 1
 ## 🔧 Step 6: Customize Hardware
 - RAM: 4 GB minimum (8 GB recommended)  
 - CPU: At least 2 cores  
-- Enable virtualization (VT-x / AMD-V)  
+- Enable virtualization (VT-x / AMD-V)
+
+### Processor Configuration
+![CPU Setup](screenshots/processor.webp)
+
+### Memory Configuration
+![Memory Setup](screenshots/memory-vm.webp)
 
 Click **Close → Finish**
+
+![VM Ready](screenshots/ready-vm.webp)
 
 ---
 
 ## ▶️ Step 7: Start Virtual Machine
 - Select the VM  
 - Click **Power on this virtual machine**
+
+![Start VM](screenshots/start-vm.webp)
 
 ---
 
@@ -103,12 +121,12 @@ Click **Close → Finish**
 
 ## 🔑 Step 9: Product Key
 - Enter product key OR  
-- Select **I don’t have a product key**
+- Click **I don’t have a product key**
 
 ---
 
 ## 📦 Step 10: Select Edition
-- Choose desired Windows 11 edition  
+- Choose Windows 11 edition  
 - Click **Next**
 
 ---
@@ -133,21 +151,21 @@ System will install and restart automatically.
 ---
 
 ## 🌐 Step 14: Final Setup
-- Configure region and keyboard  
-- Connect to network  
-- Create Microsoft or local account  
-- Adjust privacy settings  
+- Region and keyboard selection  
+- Network setup  
+- Microsoft or local account  
+- Privacy settings  
 
 ---
 
 ## 🛠️ Step 15: Install VMware Tools
 - Go to **VM → Install VMware Tools**  
-- Run installer inside VM  
+- Install inside VM  
 - Restart system  
 
 ### Benefits:
-- Better graphics performance  
-- Smooth mouse movement  
+- Better performance  
+- Smooth mouse integration  
 - File sharing between host and VM  
 
 ---
@@ -158,16 +176,19 @@ This lab successfully demonstrates:
 - Windows 11 installation  
 - System configuration in a virtual environment  
 
-This setup can be used for testing, development, and cybersecurity labs.
+It can be used for:
+- IT training  
+- Cybersecurity labs  
+- Software testing environments  
 
 ---
 
 ## 🚀 Future Improvements
 - Automate setup using scripts  
-- Integrate with Active Directory lab  
+- Integrate Active Directory lab  
 - Use for malware analysis environment  
 
 ---
 
 ## 👨‍💻 Author
-Sameera Nazneen 
+Sameera Nazneen
