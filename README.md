@@ -212,13 +212,6 @@ This project documents practical work with:
 - Initial Windows configuration
 - Basic virtualization troubleshooting
 
-## 🚀 Future Improvements
-
-- Document VMware Tools installation and verification.
-- Add troubleshooting notes for common installation errors.
-- Document verified network connectivity and host-to-guest communication.
-- Expand the environment with additional operating systems for IT support and cybersecurity practice.
-
 ## 👨‍💻 Author
 
 **Sameera Nazneen**
