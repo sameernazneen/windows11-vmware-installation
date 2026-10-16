@@ -59,7 +59,7 @@ Follow the wizard to configure the virtual machine.
 
 If you choose to install the operating system later, select that option and continue.
 
-![Install Operating System Later](images/04-oslater.webp)
+![Install Operating System Later](images/04-oslater.webp.webp)
 
 ### Step 6: Select the Guest Operating System
 
