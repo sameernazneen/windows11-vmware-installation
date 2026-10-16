@@ -1,194 +1,222 @@
-# windows11-vmware-installation
-Step-by-step Windows 11 installation on VMware Workstation Pro
+# Windows 11 Installation on VMware Workstation Pro
+
+A step-by-step guide to downloading the Windows 11 ISO, creating a virtual machine, configuring its hardware, and installing Windows 11 using VMware Workstation Pro.
 
 ## 📌 Project Type
-Lab Setup / Virtualization / Windows Deployment
 
----
+Lab Setup | Virtualization | Windows Deployment | IT Support
 
-## 🧰 Tools & Technologies
+## 🧰 Tools and Technologies
+
 - VMware Workstation Pro
 - Windows 11 ISO
-- Virtualization (Intel VT-x / AMD-V)
-
----
+- Virtual machine configuration
+- Virtual disk management
+- Virtualization technology (Intel VT-x / AMD-V)
 
 ## 📖 Overview
-This project demonstrates a complete step-by-step procedure to install Windows 11 on a virtual machine using VMware Workstation Pro. It includes ISO download, VM configuration, OS installation, and post-installation setup.
 
----
+This project documents the process of setting up a Windows 11 virtual machine using VMware Workstation Pro. It covers downloading the Windows 11 ISO, creating and configuring a virtual machine, attaching the ISO, installing the operating system, and completing the initial setup.
 
-## ⬇️ Downloading Windows 11 ISO
+Screenshots are included to demonstrate the installation workflow and key configuration steps.
 
-### Step 1: Visit official Microsoft download page
-Open a browser and navigate to the official Microsoft Windows 11 ISO download page.
+## ⬇️ Part 1: Download Windows 11 ISO
 
-![Windows 11 Download Page](screenshots/windows11-download.webp)
+### Step 1: Visit the Official Microsoft Website
 
-### Step 2: Navigate to ISO section
-Scroll down to **Download Windows 11 Disk Image (ISO)**.
+Visit the official [Windows 11 download page](https://www.microsoft.com/software-download/windows11).
 
-### Step 3: Select Windows 11 ISO
-Choose **Windows 11 (multi-edition ISO)**.
+![Windows 11 Download Page](images/01-windows_download.png)
 
-### Step 4: Choose language and download
-Select language and click **64-bit Download**.
+### Step 2: Select the Windows 11 ISO
 
-### Step 5: Verify download
-Ensure ISO file is properly downloaded in your system.
+Navigate to the section for downloading the Windows 11 disk image (ISO).
 
----
+Select the appropriate Windows 11 ISO edition, choose your preferred language, and download the 64-bit ISO file.
 
-## ⚙️ Prerequisites
-- VMware Workstation Pro installed  
-- Windows 11 ISO file  
-- Virtualization enabled in BIOS (Intel VT-x / AMD-V)  
-- Minimum system requirements:
-  - 8 GB RAM (recommended)
-  - 2 CPU cores
-  - 60 GB disk space  
+### Step 3: Verify the Download
 
----
+Confirm that the ISO file has downloaded successfully and note its storage location.
 
-## 🖥️ Step 1: Create a New Virtual Machine
-- Open VMware Workstation Pro  
-- Click **Create New Virtual Machine**  
-- Select **Typical (recommended)**  
-- Click **Next**
+![Downloaded Windows 11 ISO](images/10-iso-image.webp)
 
----
+## ⚙️ Part 2: Create a New Virtual Machine
 
-## 💿 Step 2: Mount ISO File
-- Select **Installer disc image file (ISO)**  
-- Browse and select Windows 11 ISO  
-- Click **Next**
+### Step 4: Create a New Virtual Machine
 
----
+1. Open VMware Workstation Pro.
+2. Select **Create a New Virtual Machine**.
+3. Choose **Typical (recommended)**.
+4. Continue through the setup wizard.
 
-## 🧩 Step 3: Configure Operating System
-- OS: Microsoft Windows  
-- Version: Windows 11 x64  
-- Click **Next**
+![Create a New Virtual Machine](images/02-creat-vm.webp)
 
----
+### Step 5: Configure the Virtual Machine
 
-## 📁 Step 4: Name and Location
-- Name: `Windows 11 VM`  
-- Choose storage location  
-- Click **Next**
+Follow the wizard to configure the virtual machine and select the operating system installation options.
 
----
+![Virtual Machine Configuration](images/03-configuration.webp)
 
-## 💾 Step 5: Allocate Disk Space
-- Minimum: 60 GB  
-- Choose:
-  - Single file (better performance)  
-  - Multiple files (easier transfer)  
-- Click **Next**
+If using the option to install the operating system later, select it and continue.
 
----
+![Install Operating System Later](images/04-oslater.webp)
 
-## 🔧 Step 6: Customize Hardware
-- RAM: 4 GB minimum (8 GB recommended)  
-- CPU: At least 2 cores  
-- Enable virtualization (VT-x / AMD-V)
+### Step 6: Select the Guest Operating System
 
-### Processor Configuration
-![CPU Setup](screenshots/processor.webp)
+Choose:
+- Guest operating system: Microsoft Windows
+- Version: Windows 11 x64
 
-### Memory Configuration
-![Memory Setup](screenshots/memory-vm.webp)
+The available options may vary depending on your VMware Workstation version.
 
-Click **Close → Finish**
+![Guest Operating System Selection](images/05-guest-os.webp)
 
-![VM Ready](screenshots/ready-vm.webp)
+### Step 7: Choose the Virtual Machine Name and Location
 
----
+Enter a descriptive name, such as `Windows 11 VM`, and choose a suitable storage location.
 
-## ▶️ Step 7: Start Virtual Machine
-- Select the VM  
-- Click **Power on this virtual machine**
+![Virtual Machine Location](images/06-location.webp)
 
-![Start VM](screenshots/start-vm.webp)
+### Step 8: Allocate Virtual Disk Space
 
----
+Choose a virtual disk size appropriate for the installation. A 60 GB virtual disk is a practical starting point for this lab, although more space may be needed for updates and additional applications.
 
-## 🪟 Step 8: Install Windows 11
-- Select language, time, and keyboard  
-- Click **Install Now**
+Choose whether to store the virtual disk as a single file or split it into multiple files.
 
----
+![Virtual Disk Size](images/07-disk-size.webp)
 
-## 🔑 Step 9: Product Key
-- Enter product key OR  
-- Click **I don’t have a product key**
+## 🔧 Part 3: Configure Virtual Hardware
 
----
+### Step 9: Customize Hardware
 
-## 📦 Step 10: Select Edition
-- Choose Windows 11 edition  
-- Click **Next**
+Before starting the virtual machine, review its hardware settings.
 
----
+Suggested starting configuration:
+- Memory: 4 GB minimum; 8 GB or more is preferable when available.
+- Processor: 2 virtual processor cores as a starting point.
+- Virtual disk: 60 GB or more.
+- Network adapter: Select the network mode appropriate for your lab.
 
-## 📜 Step 11: License Agreement
-- Accept terms  
-- Click **Next**
+The actual allocation should depend on the host computer's available resources.
 
----
+![VM Hardware Configuration](images/08-hardware-configuration.webp)
 
-## 🧹 Step 12: Installation Type
-- Select **Custom: Install Windows only (Advanced)**
+### Step 10: Attach the Windows 11 ISO
 
----
+Open the virtual machine settings and locate the CD/DVD drive.
 
-## 💽 Step 13: Disk Selection
-- Select virtual disk  
-- Click **Next**
+1. Select **Use ISO image file**.
+2. Browse to the downloaded Windows 11 ISO.
+3. Select the correct ISO file.
+4. Confirm the settings.
 
-System will install and restart automatically.
+![Attach Windows 11 ISO](images/09-iso-attaching.webp)
 
----
+## 🪟 Part 4: Install Windows 11
 
-## 🌐 Step 14: Final Setup
-- Region and keyboard selection  
-- Network setup  
-- Microsoft or local account  
-- Privacy settings  
+### Step 11: Start the Virtual Machine
 
----
+Power on the virtual machine and boot from the Windows 11 installation media.
 
-## 🛠️ Step 15: Install VMware Tools
-- Go to **VM → Install VMware Tools**  
-- Install inside VM  
-- Restart system  
+![Windows Installation](images/11-windows-installation.webp)
 
-### Benefits:
-- Better performance  
-- Smooth mouse integration  
-- File sharing between host and VM  
+### Step 12: Enter the Product Key
 
----
+Enter a valid product key if available. Otherwise, select **I don't have a product key** if that option is offered.
 
-## ✅ Conclusion
-This lab successfully demonstrates:
-- Virtual machine creation  
-- Windows 11 installation  
-- System configuration in a virtual environment  
+Activation may be required later, depending on your license.
 
-It can be used for:
-- IT training  
-- Cybersecurity labs  
-- Software testing environments  
+![Windows Product Key Screen](images/12-product-key.webp)
 
----
+### Step 13: Select the Windows Edition
+
+Select the edition appropriate for your license and intended use.
+
+![Windows 11 Edition Selection](images/13-windows11pro.webp)
+
+### Step 14: Accept the License Terms
+
+Review and accept the applicable license terms to continue.
+
+![Windows License Agreement](images/14-agreement.webp)
+
+### Step 15: Choose the Installation Type
+
+Select **Custom: Install Windows only (advanced)** when performing a clean installation on the new virtual machine.
+
+![Custom Windows Installation](images/15-custom-install-windows.webp)
+
+### Step 16: Configure Windows Setup
+
+Follow the installation wizard and proceed through the Windows setup screens.
+
+![Windows Setup](images/16-windows-setup.webp)
+
+### Step 17: Select the Virtual Disk
+
+Select the intended virtual disk or unallocated space for Windows installation. Double-check that you are working with the virtual machine's disk.
+
+![Windows Disk Partition Selection](images/17-disk-partition.webp)
+
+### Step 18: Wait for Installation
+
+Allow Windows to copy files, install features, and restart as required. Installation time depends on the host computer's performance and the virtual machine configuration.
+
+![Installing Windows](images/18-installing-windows.webp)
+
+## 🌐 Part 5: Complete the Initial Setup
+
+### Step 19: Configure Windows Settings
+
+Complete the initial setup screens, which may include:
+- Region and keyboard layout
+- Network connection
+- Microsoft account or available local account options
+- Privacy and device settings
+
+![Windows Initial Settings](images/19-settings.webp)
+
+### Step 20: Verify the Windows 11 Virtual Machine
+
+After setup, start the virtual machine and confirm that Windows loads correctly.
+
+![Windows 11 Virtual Machine](images/20-windowsvm.webp)
+
+### Step 21: Final Verification
+
+Review the final Windows environment and confirm that the virtual machine is ready for the next stage of configuration.
+
+![Final Windows 11 Screen](images/21-final-windows.webp)
+
+## 🛠️ Part 6: VMware Tools
+
+Where supported and applicable, install VMware Tools from the VMware Workstation menu:
+
+1. Select **VM → Install VMware Tools**.
+2. Follow the installer instructions inside the guest operating system.
+3. Restart the virtual machine if prompted.
+
+VMware Tools can improve display integration, mouse handling, and other supported guest features.
+
+## 🎯 Skills Demonstrated
+
+This project documents practical work with:
+- Virtual machine creation and configuration
+- Windows 11 ISO selection and attachment
+- Virtual CPU, memory, disk, and network settings
+- Operating system installation
+- Initial Windows configuration
+- Basic virtualization troubleshooting
 
 ## 🚀 Future Improvements
-- Automate setup using scripts  
-- Integrate Active Directory lab  
-- Use for malware analysis environment  
 
----
+- Document VMware Tools installation and verification.
+- Add troubleshooting notes for common installation errors.
+- Document verified network connectivity and host-to-guest communication.
+- Expand the environment with additional operating systems for IT support and cybersecurity practice.
 
 ## 👨‍💻 Author
-Sameera Nazneen
+
+**Sameera Nazneen**
+
+Aspiring IT Support Professional | Cybersecurity Learner
